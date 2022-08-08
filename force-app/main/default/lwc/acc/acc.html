@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Account form" icon-name="starnder-Account">
+        <lightning-record-form object-api-name="Account" record-id={recordid} mode="edit" fields={fiiedarray}
+                                 layout-type="full" onsuccess={successhandler}></lightning-record-form>
+                                 
+    </lightning-card>
+    <c-databasetable></c-databasetable>
+    
+</template>

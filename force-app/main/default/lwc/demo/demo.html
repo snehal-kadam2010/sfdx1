@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="card design">
+        <div class="slds-size_1-of-3" >
+            
+            <lightning-input name="Title" label="Title" value={title} onchange={titlehandler}></lightning-input>
+            <lightning-input name="massage" label="Massage" value={massage} onchange={masageehandler}></lightning-input>
+            <lightning-combobox
+                label="Variant"
+                value={variant}
+                onchange={variantChange}
+                options={variantOptions}>
+            </lightning-combobox>
+            <lightning-button name="submit" label="Submit" onclick={submithandler}></lightning-button>
+
+        </div>
+    </lightning-card>
+    
+    <lightning-card title="account details" icon-name="standard:account">
+        <div class="slds-slds-m-around_medium">
+            Name:{Name}
+            Phone:{phone}
+            Rating:{rating}
+        </div>
+    </lightning-card>
+    
+</template>

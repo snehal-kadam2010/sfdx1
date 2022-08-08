@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Calculator" icon-name="standard-action">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item padding="around-small">
+                <lightning-input type="Number" name="Fname" onchange={fnameevent}></lightning-input>
+                <lightning-input type="Number" name="Sename" onchange={Senameevent}></lightning-input>
+                {Result}
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-button-group>
+                    <lightning-button label="Add" icon-name="utility:add" icon-position="left" onclick={addhandler}></lightning-button>
+                    <lightning-button label="Sub" icon-name="utility:dash" icon-position="left" onclick={subhandler}></lightning-button>
+                    <lightning-button label="Mul" icon-name="utility:close" icon-position="left" onclick={mulhandler}></lightning-button>
+                    <lightning-button label="Div" icon-name="utility:magicwand" icon-position="left" onclick={divhandler}></lightning-button>
+                                 </lightning-button-group>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-input type="checkbox" label="show previous result" onchange={checkboxhandler}></lightning-input>
+            </lightning-layout-item>
+            <template if:true={showpreviousresult}>
+                <template iterator:result={showpreviousresult}>
+                    <li key={result.value}></li>
+                </template>
+
+                          
+
+            </template>
+                
+            
+
+                       
+        </lightning-layout>
+
+
+    </lightning-card>
+    
+</template>

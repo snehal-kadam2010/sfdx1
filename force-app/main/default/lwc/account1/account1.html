@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Account record">
+        <lightning-record-edit-form object-api-name="Account" record-id={recordid} onsuccess={handlersuccess}>
+
+        <div class="slds-size_1-of-3">
+            <lightning-input-field field-name="Name"> </lightning-input-field>
+            <lightning-input-field field-name="Phone"> </lightning-input-field>
+            <lightning-input-field field-name="Rating"> </lightning-input-field>
+                   <p><lightning-button label="submit" variant="brand" type="submit" onclick={handlerclike}></lightning-button></p>
+                </div>
+                
+            </lightning-record-edit-form>       
+        
+    </lightning-card>
+    
+    <lightning-card title="account view record">
+        <lightning-record-view-form object-api-name="Account" record-id={recordid}>
+            <div class="slds-size_1-of-3">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Phone"></lightning-output-field>
+                <lightning-output-field field-name="Rating"></lightning-output-field>
+
+            </div>
+
+        </lightning-record-view-form>
+
+    </lightning-card>
+</template>
